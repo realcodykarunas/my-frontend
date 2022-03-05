@@ -1,8 +1,10 @@
 import { Row, Col, Form, Input, Button } from "antd";
+import { useShortner } from "../../hooks/useShortner";
 
 export const ShortnerForm = () => {
-  const onFinish = () => {};
-  const onFinishFailed = () => {};
+  const { handleSubmit, handleError } = useShortner();
+  const onFinish = (value) => handleSubmit(value);
+  const onFinishFailed = (error) => handleError(error);
 
   return (
     <Form
