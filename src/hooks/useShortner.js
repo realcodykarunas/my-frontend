@@ -15,6 +15,7 @@ export const useShortner = () => {
     console.log("url :", url);
     console.log("slug: ", slug);
     try {
+      // Handle response
       const res = await addLink({ variables: { url, slug } });
       console.log("res: ", res);
     } catch (error) {
