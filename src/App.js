@@ -1,12 +1,10 @@
 import "./styles.css";
-import { Button } from "antd";
+import { Landing } from "./components/Landing/Landing";
 
 export default function App() {
   return (
     <div className="App">
-      <Button type="primary" size="large">
-        Click me
-      </Button>
+      <Landing />
     </div>
   );
 }
