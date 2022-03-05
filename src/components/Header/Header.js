@@ -1,15 +1,20 @@
-import { Row } from "antd";
-import Column from "antd/lib/table/Column";
+import { Row, Col, Button } from "antd";
 import logo from "../../../public/images/logo.png";
+import { HeaderContainer } from "./styled";
 
 export const Header = () => {
   return (
-    <Row>
-      <Column>
-        <img src={logo} alt="logo" />
-        Rebrandly
-      </Column>
-      <Column></Column>
-    </Row>
+    <HeaderContainer>
+      <Row>
+        <Col span={12}>
+          <img src={logo} alt="" />
+        </Col>
+        <Col span={12} style={{ textAlign: "right" }}>
+          <Button>Login</Button>
+          <Button>Sign up</Button>
+          <Button>Get a quote</Button>
+        </Col>
+      </Row>
+    </HeaderContainer>
   );
 };
