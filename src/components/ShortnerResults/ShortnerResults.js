@@ -1,4 +1,5 @@
 import { Row, Col, Typography } from "antd";
+import { Container } from "./styled";
 
 const { Paragraph } = Typography;
 
@@ -6,7 +7,7 @@ export const ShortnerResults = () => {
   const results = "results";
 
   return (
-    <div style={{ backgroundColor: "#fff", color: "#000" }}>
+    <Container>
       <Row>
         <Col span={4}>kowit.io</Col>
         <Col span={20}>
@@ -17,6 +18,6 @@ export const ShortnerResults = () => {
           </Row>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };

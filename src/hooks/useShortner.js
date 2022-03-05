@@ -9,8 +9,9 @@ export const useShortner = () => {
 
   console.log(data);
   console.log(error);
+  console.log(loading);
 
-  useEffect(() => {}, [results, formErrors, loading]);
+  useEffect(() => {}, [results, formErrors, loading, error]);
 
   const handleSubmit = async (value) => {
     const { url: urlValue } = value;
@@ -38,6 +39,7 @@ export const useShortner = () => {
     handleError,
     formErrors,
     results,
-    loading
+    loading,
+    error
   };
 };
