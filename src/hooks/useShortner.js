@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { CREATE_LINK } from "../mutations/mutations";
 
 export const useShortner = () => {
-  const [createLink] = useMutation(CREATE_LINK);
-  const [results, setResults] = useState("");
+  const [createLink, { data, loading, error }] = useMutation(CREATE_LINK);
+  const [results] = useState("");
+  const [formErrors, setFormErrors] = useState({});
+
+  console.log(data);
+  console.log(error);
+
+  useEffect(() => {}, [results, formErrors, loading]);
 
   const handleSubmit = async (value) => {
     const { url: urlValue } = value;
@@ -19,6 +25,7 @@ export const useShortner = () => {
       console.log("res: ", res);
     } catch (error) {
       console.log("Error adding link", error);
+      setFormErrors(error);
     }
   };
 
@@ -28,6 +35,9 @@ export const useShortner = () => {
 
   return {
     handleSubmit,
-    handleError
+    handleError,
+    formErrors,
+    results,
+    loading
   };
 };

@@ -2,7 +2,7 @@ import { Row, Col, Form, Input, Button } from "antd";
 import { useShortner } from "../../hooks/useShortner";
 
 export const ShortnerForm = () => {
-  const { handleSubmit, handleError } = useShortner();
+  const { handleSubmit, handleError, loading } = useShortner();
   const onFinish = (value) => handleSubmit(value);
   const onFinishFailed = (error) => handleError(error);
 
@@ -28,7 +28,12 @@ export const ShortnerForm = () => {
         </Col>
         <Col span={4}>
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button size="large" type="primary" htmlType="submit">
+            <Button
+              size="large"
+              type="primary"
+              htmlType="submit"
+              loading={loading}
+            >
               Shorten URL
             </Button>
           </Form.Item>
