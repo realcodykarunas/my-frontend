@@ -1,15 +1,19 @@
 import { Row, Col } from "antd";
+import { ShortnerResults } from "../ShortnerResults/ShortnerResults";
 import { ShortnerForm } from "./ShortnerForm";
+import { Container } from "./styled";
 
 export const Shortner = () => {
   return (
-    <div>
+    <Container>
       <Row>
-        <Col>
+        <Col span={24}>
           <ShortnerForm />
         </Col>
-        <Col></Col>
+        <Col span={24}>
+          <ShortnerResults />
+        </Col>
       </Row>
-    </div>
+    </Container>
   );
 };

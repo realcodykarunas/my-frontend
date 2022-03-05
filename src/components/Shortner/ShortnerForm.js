@@ -17,18 +17,18 @@ export const ShortnerForm = () => {
       autoComplete="off"
     >
       <Row>
-        <Col>
+        <Col span={18}>
           <Form.Item
             label=""
             name="url"
             rules={[{ required: true, message: "Please input your url" }]}
           >
-            <Input />
+            <Input size="large" />
           </Form.Item>
         </Col>
-        <Col>
+        <Col span={4}>
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit">
+            <Button size="large" type="primary" htmlType="submit">
               Shorten URL
             </Button>
           </Form.Item>

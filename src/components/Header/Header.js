@@ -9,10 +9,18 @@ export const Header = () => {
         <Col span={12}>
           <img src={logo} alt="" />
         </Col>
-        <Col span={12} style={{ textAlign: "right" }}>
-          <Button>Login</Button>
-          <Button>Sign up</Button>
-          <Button>Get a quote</Button>
+        <Col span={12}>
+          <Row gutter={10} style={{ textAlign: "right" }}>
+            <Col>
+              <Button>Login</Button>
+            </Col>
+            <Col>
+              <Button>Sign up</Button>
+            </Col>
+            <Col>
+              <Button>Get a quote</Button>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </HeaderContainer>
