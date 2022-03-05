@@ -1,5 +1,5 @@
-import "./styles.css";
 import { Landing } from "./components/Landing/Landing";
+import "./styles.css";
 
 export default function App() {
   return (

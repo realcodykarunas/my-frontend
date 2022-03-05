@@ -9,7 +9,7 @@ export const Jumbotron = () => (
   <JumboContainer>
     <Row>
       <Column>
-        <Row gutter={10}>
+        <Row gutter={10} style={{ paddingTop: "80px" }}>
           <Col>
             <Title level={2}>Your Brand on Your Links</Title>
           </Col>
